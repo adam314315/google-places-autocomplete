@@ -28,13 +28,16 @@ function onPlaceChanged() {
   }
 
   nameLabel =  document.getElementById('name')
-  nameLabel.value = place.name
+  if(nameLabel)
+    nameLabel.value = place.name
   
   phone =  document.getElementById('phone')
-  phone.value = place.formatted_phone_number
+  if(phone)
+    phone.value = place.formatted_phone_number
   
   website =  document.getElementById('website')
-  website.value = place.website
+  if(website)
+    website.value = place.website
 }
 
 google.maps.event.addDomListener(window, 'load', function() {
